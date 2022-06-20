@@ -19,7 +19,7 @@ public class HomeServlet extends HttpServlet {
 //        response.setContentType("text/html");
 //        PrintWriter out = response.getWriter();
 //        out.print("<h2> Hello Marat </h2>");
-        request.getRequestDispatcher("index.html").forward(request, response);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 
     @Override
@@ -33,6 +33,6 @@ public class HomeServlet extends HttpServlet {
 
         List<Student> students = dbManager.getAllStudents();
         System.out.println(students);
-        request.getRequestDispatcher("index.html").forward(request, response);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 }
