@@ -15,14 +15,7 @@
 </head>
 <body>
 <div class="container">
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="nav-link" href="/lesson-1">Lesson-1</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Lesson-2</a>
-        </li>
-    </ul>
+    <%@include file="nav.jsp"%>
     <h2>Java Enterprise Edition</h2>
 </div>
 </body>

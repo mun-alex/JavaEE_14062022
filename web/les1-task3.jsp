@@ -19,14 +19,7 @@
 </head>
 <body>
 <div class="container">
-  <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Lesson-1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Lesson-2</a>
-    </li>
-  </ul>
+  <%@include file="nav.jsp"%>
     <div class="row mt-5">
       <div class="col-lg-4">
         <form action="/lesson-1-task-3" method="get">
