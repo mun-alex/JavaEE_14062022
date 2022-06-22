@@ -15,22 +15,8 @@
 </head>
 <body>
 <div class="container">
-    <div class="row">
-        <div class="col-lg-5 m-auto mt-5">
-            <form action="/main" method="post">
-                <div class="mb-3">
-                    <label for="studentName" class="form-label">Name</label>
-                    <input type="text" class="form-control" name="studentName" id="studentName">
-                </div>
-                <div class="mb-3">
-                    <label for="studentLastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" name="studentLastName" id="studentLastName">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-
-    </div>
+    <%@include file="nav.jsp"%>
+    <h2>Java Enterprise Edition</h2>
 </div>
 </body>
 </html>
