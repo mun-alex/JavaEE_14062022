@@ -23,7 +23,7 @@
 <div class="container">
     <%@include file="nav.jsp"%>
     <div class="row">
-        <div class="col-lg-4 m-auto mt-5">
+        <div class="col-lg-4 mt-5">
             <form action="/lesson-3" method="post">
                 <div class="mb-3">
                     <label for="studentName" class="form-label">Name</label>
@@ -44,9 +44,7 @@
                 <button type="submit" class="btn btn-primary">Add Student</button>
             </form>
         </div>
-    </div>
-    <div class="row">
-        <div class="col m-auto mt-5">
+        <div class="col-lg-8 mt-5">
             <table class="table table-striped">
                 <thead class="table-light">
                 <tr>
@@ -55,6 +53,7 @@
                     <th scope="col">Surname</th>
                     <th scope="col">Birthdate</th>
                     <th scope="col">City</th>
+                    <th scope="col">Details</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -68,6 +67,7 @@
                     <td><%=student.getSurname()%></td>
                     <td><%=student.getBirthday()%></td>
                     <td><%=student.getCity()%></td>
+                    <td><a href="/lesson-3-details?studentId=<%=student.getId()%>" class="btn btn-dark">details</a></td>
                 </tr>
                 <%
                     }

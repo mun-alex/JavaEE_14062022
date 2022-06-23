@@ -52,4 +52,24 @@ public class DBManagerJDBC {
         }
         return studentList;
     }
+
+    public static Student getStudentById(Long id) {
+        Student student = null;
+        try {
+            PreparedStatement statement = connection.prepareStatement("select * from students where id = ?");
+            statement.setLong(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                String name = resultSet.getString("name");
+                String surname = resultSet.getString("surname");
+                String birthdate = resultSet.getString("birthdate");
+                String city = resultSet.getString("city");
+                student = new Student(id, name, surname, birthdate, city);
+            }
+            statement.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return student;
+    }
 }
