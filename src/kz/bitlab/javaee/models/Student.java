@@ -1,15 +1,25 @@
 package kz.bitlab.javaee.models;
 
 public class Student {
+    private Long id;
     private String name;
-    private String lastName;
+    private String surname;
+    private String birthday;
+    private String city;
 
     public Student() {
     }
 
-    public Student(String name, String lastName) {
+    public Student(Long id, String name, String surname, String birthday, String city) {
+        this.id = id;
         this.name = name;
-        this.lastName = lastName;
+        this.surname = surname;
+        this.birthday = birthday;
+        this.city = city;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getName() {
@@ -20,16 +30,27 @@ public class Student {
         this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
-    @Override
-    public String toString() {
-        return name + " " +lastName;
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }

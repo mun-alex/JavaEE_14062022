@@ -1,15 +1,11 @@
 package kz.bitlab.javaee.servlets;
 
-import kz.bitlab.javaee.db.DBManager;
-import kz.bitlab.javaee.models.Student;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet(value = "/lesson-1-task-3")
 public class Les1Task3Servlet extends HttpServlet {

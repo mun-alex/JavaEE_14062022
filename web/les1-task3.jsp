@@ -1,5 +1,5 @@
 <%@ page import="java.util.List" %>
-<%@ page import="kz.bitlab.javaee.models.Student" %><%--
+<%@ page import="kz.bitlab.javaee.models.Person" %><%--
   Created by IntelliJ IDEA.
   User: alex
   Date: 16/6/22

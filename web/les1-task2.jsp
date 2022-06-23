@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="kz.bitlab.javaee.models.Student" %><%--
+<%@ page import="kz.bitlab.javaee.models.Person" %>
+<%@ page import="kz.bitlab.javaee.models.Person" %><%--
   Created by IntelliJ IDEA.
   User: alex
   Date: 16/6/22
@@ -22,7 +23,7 @@
     <%@include file="nav.jsp"%>
     <div class="row">
         <div class="col-lg-4 m-auto mt-5">
-            <form action="/lesson-1" method="post">
+            <form action="/lesson-1-task-2" method="post">
                 <div class="mb-3">
                     <label for="studentName" class="form-label">Name</label>
                     <input type="text" class="form-control" name="studentName" id="studentName">
@@ -43,14 +44,14 @@
                 </tr>
                 </thead>
                 <%
-                    List<Student> students = (List<Student>) request.getAttribute("students");
-                    for (Student student : students) {
+                    List<Person> people = (List<Person>) request.getAttribute("people");
+                    for (Person person : people) {
                 %>
                 <tbody>
                 <tr>
-                    <td><%=student.getName()%>
+                    <td><%=person.getName()%>
                     </td>
-                    <td><%=student.getLastName()%>
+                    <td><%=person.getLastName()%>
                     </td>
                 </tr>
                 </tbody>

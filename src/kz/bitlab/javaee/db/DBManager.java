@@ -1,22 +1,22 @@
 package kz.bitlab.javaee.db;
 
 import kz.bitlab.javaee.models.Item;
-import kz.bitlab.javaee.models.Student;
+import kz.bitlab.javaee.models.Person;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DBManager {
-    private static List<Student> studentList = new ArrayList<>();
+    private static List<Person> personList = new ArrayList<>();
     private static List<Item> itemList = new ArrayList<>();
     private static Long itemId = 1L;
 
-    public void addStudent(Student student) {
-        studentList.add(student);
+    public void addPerson(Person person) {
+        personList.add(person);
     }
 
-    public List<Student> getAllStudents() {
-        return studentList;
+    public List<Person> getAllPersons() {
+        return personList;
     }
 
     public void addItem(Item item) {
