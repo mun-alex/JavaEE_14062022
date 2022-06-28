@@ -22,23 +22,29 @@
 <body>
 <div class="container">
     <%@include file="nav.jsp"%>
+    <%
+        String name = (String) request.getAttribute("name");
+        String surname = (String) request.getAttribute("surname");
+        String birthdate = (String) request.getAttribute("birthdate");
+        String city = (String) request.getAttribute("city");
+    %>
     <div class="row">
         <div class="col-lg-4 mt-5">
             <form action="/lesson-3" method="post">
                 <div class="mb-3">
-                    <label for="studentName" class="form-label">Name</label>
+                    <label for="studentName" class="form-label"><%=name%></label>
                     <input type="text" class="form-control" name="studentName" id="studentName">
                 </div>
                 <div class="mb-3">
-                    <label for="studentSurame" class="form-label">Surname</label>
+                    <label for="studentSurame" class="form-label"><%=surname%></label>
                     <input type="text" class="form-control" name="studentSurname" id="studentSurame">
                 </div>
                 <div class="mb-3">
-                    <label for="studentBirthdate" class="form-label">Birthdate</label>
+                    <label for="studentBirthdate" class="form-label"><%=birthdate%></label>
                     <input type="date" class="form-control" name="studentBirthdate" id="studentBirthdate">
                 </div>
                 <div class="mb-3">
-                    <label for="studentCity" class="form-label">City</label>
+                    <label for="studentCity" class="form-label"><%=city%></label>
                     <input type="text" class="form-control" name="studentCity" id="studentCity">
                 </div>
                 <button type="submit" class="btn btn-primary">Add Student</button>

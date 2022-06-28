@@ -14,4 +14,10 @@
   <li class="nav-item">
     <a class="nav-link" href="/lesson-3">Lesson-3</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="lang-choice?langChoice=0">RU</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="lang-choice?langChoice=1">EN</a>
+  </li>
 </ul>
