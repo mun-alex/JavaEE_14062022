@@ -17,13 +17,7 @@ import java.io.IOException;
 public class Les3TaskServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        String name = "";
-        String surname = "";
-        String birthdate = "";
-        String city = "";
-
-        String lang = "";
+        boolean isCookieLangExist = false;
         Cookie [] cookies = request.getCookies();
         for (Cookie cookie : cookies) {
             if (cookie.getName().equals("lang")) {
@@ -43,15 +37,15 @@ public class Les3TaskServlet extends HttpServlet {
                     default:
                         break;
                 }
-            } else {
+                isCookieLangExist = true;
+            }
+            if (!isCookieLangExist) {
                 request.setAttribute("name", Translation.translation.get(1).get(0));
                 request.setAttribute("surname", Translation.translation.get(1).get(1));
                 request.setAttribute("birthdate", Translation.translation.get(1).get(2));
                 request.setAttribute("city", Translation.translation.get(1).get(3));
             }
         }
-
-
         request.setAttribute("students", DBManagerJDBC.getAllStudents());
         request.getRequestDispatcher("/les3.jsp").forward(request, response);
     }
